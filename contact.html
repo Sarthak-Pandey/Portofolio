@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sarthak Pandey - Frontend Developer. Get in touch via the accessible contact form, email address, or phone number.">
+  <meta name="keywords" content="Contact Sarthak Pandey, Web Developer contact, Email Frontend developer, Varanasi Web Design phone number">
+  <meta name="author" content="Sarthak Pandey">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sarthakpandey.com/contact.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sarthakpandey.com/contact.html">
+  <meta property="og:title" content="Contact Information | Sarthak Pandey">
+  <meta property="og:description" content="Reach out to Sarthak Pandey for collaboration, front-end development projects, or standard web audit services.">
+  <meta property="og:image" content="https://sarthakpandey.com/img/hero-bg.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sarthakpandey.com/contact.html">
+  <meta property="twitter:title" content="Contact Information | Sarthak Pandey">
+  <meta property="twitter:description" content="Reach out to Sarthak Pandey for collaboration, front-end development projects, or standard web audit services.">
+  <meta property="twitter:image" content="https://sarthakpandey.com/img/hero-bg.png">
+
+  <meta name="theme-color" content="#dc143c">
+  <title>Contact | Sarthak Pandey - Frontend Developer</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Skip to Main Content Link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="index.html">
+            <h1><span>S</span>arthak <span>P</span>andey</h1>
+          </a>
+        </div>
+        <nav class="nav-list" aria-label="Primary site navigation">
+          <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar" aria-hidden="true"></span>
+          </button>
+          <ul id="nav-menu">
+            <li><a href="index.html" data-after="Home">Home</a></li>
+            <li><a href="about.html" data-after="About">About</a></li>
+            <li><a href="projects.html" data-after="Projects">Projects</a></li>
+            <li><a href="skills.html" data-after="Skills">Skills</a></li>
+            <li><a href="experience.html" data-after="Experience">Experience</a></li>
+            <li><a href="contact.html" class="active-link" aria-current="page" data-after="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- Contact Info Section -->
+    <section id="contact">
+      <div class="contact container">
+        <div>
+          <h1 class="section-title">Contact <span>info</span></h1>
+        </div>
+        <div class="contact-items">
+          
+          <!-- Phone Card -->
+          <div class="contact-item">
+            <div class="icon">
+              <img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="" aria-hidden="true" />
+            </div>
+            <div class="contact-info">
+              <h2>Phone</h2>
+              <p>+1 234 123 1234</p>
+              <p>+1 234 123 1234</p>
+            </div>
+          </div>
+          
+          <!-- Email Card -->
+          <div class="contact-item">
+            <div class="icon">
+              <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="" aria-hidden="true" />
+            </div>
+            <div class="contact-info">
+              <h2>Email</h2>
+              <p>info@gmail.com</p>
+              <p>abcd@gmail.com</p>
+            </div>
+          </div>
+          
+          <!-- Address Card -->
+          <div class="contact-item">
+            <div class="icon">
+              <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" alt="" aria-hidden="true" />
+            </div>
+            <div class="contact-info">
+              <h2>Address</h2>
+              <p>Varanasi, Uttar Pradesh, India</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Accessible Contact Form -->
+        <form id="contact-form" class="contact-form-container" novalidate>
+          <fieldset>
+            <legend>Send a Message</legend>
+            
+            <!-- Accessible validation containers -->
+            <div id="error-summary" class="validation-summary" role="alert" aria-live="assertive" tabindex="-1"></div>
+            <div id="success-summary" class="form-success-msg" role="status" tabindex="-1"></div>
+
+            <p style="color: white; margin-bottom: 25px; font-size: 1.4rem;">Fields marked with <span style="color: #ff6b6b; font-weight: bold;">*</span> are required.</p>
+
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="name">Full Name <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="name-error" />
+              <span id="name-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="email">Email Address <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-error" />
+              <span id="email-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Phone Input -->
+            <div class="form-group">
+              <label for="phone">Phone Number (Optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error" />
+              <span id="phone-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Subject Input -->
+            <div class="form-group">
+              <label for="subject">Subject <span class="required-star" aria-hidden="true">*</span></label>
+              <input type="text" id="subject" name="subject" required aria-required="true" aria-describedby="subject-error" />
+              <span id="subject-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="form-group">
+              <label for="message">Message <span class="required-star" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
+              <span id="message-error" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="form-submit-btn">Send Message</button>
+          </fieldset>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>S</span>arthak <span>P</span>andey</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#" aria-label="Visit Sarthak's Facebook profile (opens in new tab)">
+            <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" alt="" aria-hidden="true" />
+          </a>
+        </div>
+        <div class="social-item">
+          <a href="#" aria-label="Visit Sarthak's Instagram profile (opens in new tab)">
+            <img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="" aria-hidden="true" />
+          </a>
+        </div>
+        <div class="social-item">
+          <a href="#" aria-label="Visit Sarthak's Behance profile (opens in new tab)">
+            <img src="https://img.icons8.com/bubbles/100/000000/behance.png" alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+      <p>Copyright © 2026 Sarthak Pandey. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
