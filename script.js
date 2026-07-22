@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initHeaderScroll();
     initContactForm();
+    initThemeToggle();
 });
 
 /**
@@ -239,4 +240,31 @@ function initContactForm() {
         summaryContainer.setAttribute('tabindex', '-1');
         summaryContainer.focus();
     }
+}
+
+/**
+ * Dynamic Light/Dark Theme Switching
+ */
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+
+    // Check for saved theme preference, otherwise use system preference
+    const savedTheme = localStorage.getItem('theme-preference');
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-theme');
+        themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+    } else {
+        document.body.classList.remove('light-theme');
+        themeToggle.setAttribute('aria-label', 'Switch to light theme');
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        const isLight = document.body.classList.toggle('light-theme');
+        localStorage.setItem('theme-preference', isLight ? 'light' : 'dark');
+        themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+    });
 }
